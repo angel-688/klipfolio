@@ -935,15 +935,6 @@ h6 {
           transform: translate(0%, -30%);
 }
 
-._watcher-view .share__columns {
-  opacity: 1;
-  -webkit-transform: translate(0%, 0%);
-      -ms-transform: translate(0%, 0%);
-          transform: translate(0%, 0%);
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
-}
-
 .share__column {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1529,6 +1520,15 @@ h6 {
     margin-bottom: 3.625rem;
   }
 
+  ._watcher-view .share__columns {
+    opacity: 1;
+    -webkit-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+
   .share__info {
     max-width: 40.75rem;
     margin: 0 auto;
@@ -1605,7 +1605,7 @@ h6 {
   }
 
   .page__data {
-    padding-top: 5rem;
+    padding-top: 6.25rem;
   }
 
   .page__pull {
@@ -1946,7 +1946,7 @@ h6 {
             flex-direction: column;
   }
 
-  .reach__image {
+  .reach__image-box {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -1979,12 +1979,24 @@ h6 {
             flex-direction: column;
   }
 
-  .share__columns {
+  .share__body {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+
+  .share__columns {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+
+  ._watcher-view .share__columns {
+    opacity: 1;
+    -webkit-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+    -webkit-transition: all 0.8s 0.8s;
+    transition: all 0.8s 0.8s;
   }
 
   .share__info {
@@ -2172,8 +2184,8 @@ h6 {
 
   .share__column {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
   }
 
   .get__button {
@@ -2262,15 +2274,15 @@ h6 {
     }
 }
 
-@supports (padding-top: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem )) {
+@supports (padding-top: clamp( 2.5rem , 1.1363636364rem  +  6.8181818182vw , 6.25rem )) {
     .page__data {
-      padding-top: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem );
+      padding-top: clamp( 2.5rem , 1.1363636364rem  +  6.8181818182vw , 6.25rem );
     }
 }
 
-@supports not (padding-top: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem )) {
+@supports not (padding-top: clamp( 2.5rem , 1.1363636364rem  +  6.8181818182vw , 6.25rem )) {
     .page__data {
-      padding-top: calc(2.5rem + 2.5 * (100vw - 20rem) / 55);
+      padding-top: calc(2.5rem + 3.75 * (100vw - 20rem) / 55);
     }
 }
 
